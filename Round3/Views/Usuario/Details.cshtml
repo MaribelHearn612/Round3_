@@ -1,0 +1,50 @@
+﻿@model Round3.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre del usuario
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreUsuario)
+        </dd>
+
+        <dt>
+            Número de carnet
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noCarnet)
+        </dd>
+
+        <dt>
+            Tipo de persona
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPersona.nombreTipoP)
+        </dd>
+
+        <dt>
+            Tipo de usuario
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoUsuario.nombreTipoU)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idUsuario }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

@@ -1,0 +1,48 @@
+﻿@model Round3.TecnologiaConexion
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Está seguro de que desea borrar este registro?</h3>
+<div>
+    <h4>Tecnología de Conexión</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tecnología de conexión
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreTC)
+        </dd>
+
+        <dt>
+            Descripción
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionTC)
+        </dd>
+
+        <dt>
+            Estado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoTC)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,74 @@
+﻿@model Round3.RentaDevolucion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Renta y Devolución</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Fecha del préstamo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaP)
+        </dd>
+
+        <dt>
+            Fecha de devolución
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaD)
+        </dd>
+
+        <dt>
+            Comentario
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comentario)
+        </dd>
+
+        <dt>
+            Estado del préstamo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoPrestamo)
+        </dd>
+
+        <dt>
+            Nombre del empleado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empleado.nombreEmpleado)
+        </dd>
+
+        <dt>
+            Nombre del equipo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipo.nombreEquipo)
+        </dd>
+
+        <dt>
+            Nombre del usuario
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.nombreUsuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.noPrestamo }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

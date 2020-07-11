@@ -1,0 +1,26 @@
+﻿@model Round3.TipoPersona
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Tipo de Persona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tipo de persona
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreTipoP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idTipoP }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

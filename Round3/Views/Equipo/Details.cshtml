@@ -1,0 +1,74 @@
+﻿@model Round3.Equipo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Equipo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreEquipo)
+        </dd>
+
+        <dt>
+           Descripción
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionEquipo)
+        </dd>
+
+        <dt>
+           Serial
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.serial)
+        </dd>
+
+        <dt>
+            Estado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoEquipo)
+        </dd>
+
+        <dt>
+           Nombre del modelo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo.nombreModelo)
+        </dd>
+
+        <dt>
+            Tecnología de conexión
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TecnologiaConexion.nombreTC)
+        </dd>
+
+        <dt>
+            Tipo de equipo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEquipo.nombreTE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idEquipo }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

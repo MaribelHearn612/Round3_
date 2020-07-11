@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Round3.TecnologiaConexion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tecnología de conexión</h2>
+
+<p>
+    @Html.ActionLink("Crear", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tecnología de conexión
+        </th>
+        <th>
+            Descripción
+        </th>
+        <th>
+            Estado
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcionTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estadoTC)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.idTC }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.idTC }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.idTC })
+        </td>
+    </tr>
+}
+
+</table>
