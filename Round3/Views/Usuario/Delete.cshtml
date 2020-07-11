@@ -1,0 +1,56 @@
+﻿@model Round3.Usuario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Está seguro de que desea borrar este registro?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre del usuario
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreUsuario)
+        </dd>
+
+        <dt>
+            Número de carnet
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.noCarnet)
+        </dd>
+
+        <dt>
+            Tipo de persona
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPersona.nombreTipoP)
+        </dd>
+
+        <dt>
+            Tipo de usuario
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoUsuario.nombreTipoU)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

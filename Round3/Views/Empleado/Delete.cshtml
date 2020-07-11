@@ -1,0 +1,63 @@
+﻿@model Round3.Empleado
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Está seguro de que desea borrar este registro?</h3>
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreEmpleado)
+        </dd>
+
+        <dt>
+            Tanda laboral
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tandaLabor)
+        </dd>
+
+        <dt>
+            Fecha de ingreso
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaIngreso)
+        </dd>
+
+        <dt>
+            Cédula
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cedulaEmpleado)
+        </dd>
+
+        <dt>
+            Estado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoEmpleado)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

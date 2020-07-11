@@ -1,0 +1,42 @@
+﻿@model Round3.Marca
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Marca</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreMarca)
+        </dd>
+
+        <dt>
+           Descripción
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionMarca)
+        </dd>
+
+        <dt>
+            Estado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoMarca)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idMarca }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

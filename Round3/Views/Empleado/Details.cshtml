@@ -1,0 +1,57 @@
+﻿@model Round3.Empleado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreEmpleado)
+        </dd>
+
+        <dt>
+            Tanda laboral
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tandaLabor)
+        </dd>
+
+        <dt>
+            Fecha de ingreso
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaIngreso)
+        </dd>
+
+        <dt>
+            Cédula
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cedulaEmpleado)
+        </dd>
+
+        <dt>
+            Estado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoEmpleado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idEmpleado }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

@@ -1,0 +1,80 @@
+﻿@model Round3.RentaDevolucion
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Está seguro de que de sea borrar este registro?</h3>
+<div>
+    <h4>Renta y Devolución</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Fecha del préstamo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaP)
+        </dd>
+
+        <dt>
+            Fecha de devolución
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaD)
+        </dd>
+
+        <dt>
+            Comentario
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comentario)
+        </dd>
+
+        <dt>
+            Estado del préstamo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoPrestamo)
+        </dd>
+
+        <dt>
+            Nombre del empleado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empleado.nombreEmpleado)
+        </dd>
+
+        <dt>
+            Nombre del equipo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipo.nombreEquipo)
+        </dd>
+
+        <dt>
+           Nombre del usuario
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.nombreUsuario)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

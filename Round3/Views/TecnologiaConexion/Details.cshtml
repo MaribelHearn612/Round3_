@@ -1,0 +1,42 @@
+﻿@model Round3.TecnologiaConexion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Tecnología de Conexión</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tecnología de conexión
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreTC)
+        </dd>
+
+        <dt>
+            Descripción
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionTC)
+        </dd>
+
+        <dt>
+            Estado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estadoTC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idTC }) |
+    @Html.ActionLink("Volver", "Index")
+</p>
